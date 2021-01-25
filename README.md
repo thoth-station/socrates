@@ -5,6 +5,7 @@ Experimental project on reviewer recommendation based on source code and srcops 
 Example usage:
 
 .. code-block::
+
     >>> from reviewer_recommender import ReviewerRecommender
     >>> r = ReviewerRecommender()
     >>> r.initialize_knowledge(repository="thoth-station/mi-scheduler")
