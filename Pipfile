@@ -8,6 +8,11 @@ nltk = "*"
 gensim = "*"
 srcopsmetrics = "*"
 pygithub = "*"
+voluptuous = "*"
+jupyter = "*"
+seaborn = "*"
+perceval = "*"
+scikit-learn = "*"
 
 [dev-packages]
 pytest = "*"
