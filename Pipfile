@@ -13,6 +13,7 @@ jupyter = "*"
 seaborn = "*"
 perceval = "*"
 scikit-learn = "*"
+tensorflow = "*"
 
 [dev-packages]
 pytest = "*"
