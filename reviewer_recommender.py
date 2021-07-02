@@ -14,7 +14,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with thoth-station/mi - Meta-information Indicators.  If not, see <http://www.gnu.org/licenses/>.
+"""Utilities for reviewer recommendation."""
 
+import os
 from github import Github
 
 from srcopsmetrics.entities.pull_request import PullRequest
@@ -23,9 +25,7 @@ from srcopsmetrics.iterator import KnowledgeAnalysis
 from nltk.tokenize import word_tokenize
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
-from typing import Tuple, Dict, Any, List
-
-"""Utilities for reviewer recommendation."""
+from typing import Any, List
 
 
 class ReviewerRecommender:
@@ -41,7 +41,7 @@ class ReviewerRecommender:
         self.index = None
         self.doc2vec = None
 
-    def initialize_doc2vec(self) -> Tuple[Dict[int, str], Doc2Vec]:
+    def initialize_doc2vec(self):
         """Get doc2vec model and its inverted index for PR authors as tuple."""
         authors = set()
         for pr in self.data.values():
@@ -62,7 +62,7 @@ class ReviewerRecommender:
         self.doc2vec = Doc2Vec(tagged, vector_size=20, window=5, min_count=1, workers=4, epochs=100)
 
     def initialize_knowledge(self, repository: str, is_local=False):
-        """Add repository knowledge to the data"""
+        """Add repository knowledge to the data."""
         if is_local:
             pr = PullRequest()
             pr.load_previous_knowledge(is_local=True)
