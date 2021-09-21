@@ -9,11 +9,11 @@ gensim = "*"
 srcopsmetrics = "*"
 pygithub = "*"
 voluptuous = "*"
-jupyter = "*"
 seaborn = "*"
 perceval = "*"
 scikit-learn = "*"
 tensorflow = "*"
+jupyterlab-requirements = "*"
 
 [dev-packages]
 pytest = "*"
