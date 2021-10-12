@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""This file carries the version of the template project."""
+"""Socrates."""
 
-__version__ = "0.1.0"
+__name__ = "socrates"
+__version__ = "0.0.0"

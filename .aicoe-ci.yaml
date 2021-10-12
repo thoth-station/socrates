@@ -1,1 +1,11 @@
-check: []
+check:
+  - thoth-build
+build:
+  build-stratergy: Source
+  build-source-script: "image:///opt/app-root/builder"
+  base-image: "quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.2"
+  custom-tag: latest
+  registry: quay.io
+  registry-org: thoth-station
+  registry-project: socrates
+  registry-secret: thoth-station-thoth-pusher-secret
