@@ -3,7 +3,7 @@ check:
 build:
   build-stratergy: Source
   build-source-script: "image:///opt/app-root/builder"
-  base-image: "quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.2"
+  base-image: "quay.io/thoth-station/s2i-elyra-custom-notebook:v0.4.6"
   custom-tag: latest
   registry: quay.io
   registry-org: thoth-station
